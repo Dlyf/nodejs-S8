@@ -1,0 +1,39 @@
+html {
+  background-color: #e7e7e7;
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-shadow: 0.0625rem 0.0625rem 0 #fff;
+  font-size: 1.2em;
+  text-align: center;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 30rem;
+  margin-left: auto;
+  margin-right: auto;
+  perspective: 700px;
+}
+
+.wobbly {
+  transform-origin: center;
+  animation: wobbly 3s cubic-bezier(.71,.03,.08,.98) infinite backwards;
+}
+
+@keyframes wobbly {
+  0% {
+    transform: translateZ(-100px);
+  }
+  50% {
+    transform: translateZ(100px) rotate(0deg);
+  }
+  75% {
+    transform: translateZ(100px) rotate(360deg);
+  }
+  100% {
+    transform: translateZ(-100px) rotate(360deg);
+  }
+}
